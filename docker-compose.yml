@@ -1,0 +1,15 @@
+version: '2'
+services:
+  web:
+    build: .
+    depends_on:
+      - mysql
+    command: bash -c "while ! curl -s mysql:3306 > /dev/null; do echo waiting for mysql; sleep 3; done; npm start"
+    links:
+      - mysql:DB_HOST
+  mysql:
+    build: ./gitribution-mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=tomato
+
+

@@ -1,2 +1,2 @@
-exports.orgs = ['mozilla-appmaker', 'mozilla', 'mozilla-b2g', 'mozilla-services', 'mozillafordevelopment'];
+exports.orgs = ['rust-lang'];
 //exports.orgs = ['mozilla-b2g'];
